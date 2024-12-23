@@ -334,7 +334,6 @@ header nav .links button {
 
 /* Contenedor principal de la sección */
 .container-contacto {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -476,7 +475,10 @@ footer li {
     }
 
     .contacto h1 {
-        font-size: 1.6em;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
     .contacto p {
@@ -484,15 +486,177 @@ footer li {
     }
 
     form {
-        width: 90%;
+        align-items: center;
     }
 
     form input,
     form textarea {
         font-size: 0.9em;
+        align-items: center;
     }
 
     form button {
         font-size: 1em;
     }
+
+
+    #contacto {
+        height: 100vh;
+        /* Para que tome toda la altura de la pantalla */
+        width: 100vw;
+        /* Para que tome todo el ancho de la pantalla */
+        margin: 0;
+        /* Elimina cualquier margen externo */
+        padding: 0;
+        text-align: center;
+
+        align-items: center;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        /* Opcional: previene el scroll extra */
+    }
+
+    .contacto-contacto {
+        position: relative;
+
+        align-items: center;
+        height: 100%;
+        /* Asegura que ocupe toda la altura del contenedor */
+        width: 100%;
+        /* Asegura que ocupe todo el ancho del contenedor */
+        padding: 5% 0;
+        color: #ffffff;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("/imagenes/contacto.png") no-repeat center center/cover;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    form input,
+    form textarea {
+        width: 50%;
+        align-items: center;
+        padding: 12px;
+        border: 1px solid #888888;
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 1em;
+    }
+
+
+    /* Imagen de fondo con capa oscura */
+    .contacto-contacto::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Asegura que la capa cubra todo el ancho */
+        height: 100%;
+
+        align-items: center;
+        /* Asegura que la capa cubra toda la altura */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Oscurece el fondo */
+        z-index: 1;
+    }
+
+    /* Contenedor del formulario */
+    .formulario {
+        position: relative;
+        align-items: center;
+        z-index: 2;
+        background-color: rgba(60, 60, 60, 0.9);
+        border-radius: 15px;
+        padding: 20px;
+        width: 50%;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    /* Título */
+    .formulario h2 {
+
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    /* Campos del formulario */
+    .campo {
+
+        align-items: center;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .campo input,
+    .campo textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #888888;
+        border-radius: 8px;
+        background-color: #2c2c2c;
+        color: #ffffff;
+        font-size: 1em;
+    }
+
+    .campo input::placeholder,
+    .campo textarea::placeholder {
+        color: #fffefe;
+    }
+
+    .campo textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    /* Botón de envío */
+    .btn-enviar {
+        display: block;
+        width: 100%;
+        color: #000000;
+        background-color: #049602;
+        border-color: #049602;
+        padding: 1rem;
+        font-size: 1.25rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-enviar:hover {
+        background-color: #037d01;
+    }
+
+    /* Redes sociales */
+    .redes-sociales {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .redes-sociales .icono {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .redes-sociales .icono:hover {
+        background-color: #888888;
+    }
+
+    .redes-sociales .icono img {
+        width: 24px;
+        height: 24px;
+    }
+
 }
