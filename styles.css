@@ -140,14 +140,16 @@ header nav .links button {
 }
 
 #servicios .container button {
-    background-color: rgb(58, 236, 8);
-    color: rgb(0, 0, 0);
-    border: none;
-    margin: 5px 10px;
-    padding: 5px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+    display: block;
+    width: 100%;
+    color: #000000;
+    background-color: #049602;
+    border-color: #049602;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    margin: 20px 10px;
+    padding: 15px 40px;
 }
 
 /* Servicios */
