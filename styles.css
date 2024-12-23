@@ -97,11 +97,12 @@ header nav .links button {
     background-color: rgb(58, 236, 8);
     color: rgb(0, 0, 0);
     border: none;
-    margin: 5px 10px;
-    padding: 5px 5px;
-    border-radius: 5px;
+    margin: 20px 15px;
+    padding: 20px 50px;
+    border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 
@@ -408,6 +409,35 @@ footer {
     font-size: 0.9em;
 }
 
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.redes-sociales .icono {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.redes-sociales .icono:hover {
+    background-color: #888888;
+}
+
+.redes-sociales .icono img {
+    width: 24px;
+    height: 24px;
+}
+
 /* Contenedor del footer */
 .contenedor-footer {
     max-width: 1200px;
@@ -459,7 +489,7 @@ footer li {
     .ul_links {
         position: static;
         width: auto;
-        height: auto;
+        height: 70px;
         flex-direction: row;
         gap: 2rem;
     }
@@ -471,7 +501,7 @@ footer li {
     }
 
     .link:hover {
-        background-color: #5f1192;
+        background-color: #ffffff;
     }
 
     .contacto h1 {
@@ -479,10 +509,20 @@ footer li {
         text-align: center;
         font-weight: bold;
         margin-bottom: 10px;
+        padding-top: 30px;
     }
 
     .contacto p {
         font-size: 1em;
+    }
+
+    .navbar {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0em 3em;
     }
 
     #servicios {
@@ -838,7 +878,6 @@ footer li {
         /* Elimina cualquier margen externo */
         padding: 0;
         text-align: center;
-
         align-items: center;
         font-family: Arial, sans-serif;
         overflow: hidden;
