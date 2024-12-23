@@ -336,7 +336,7 @@ header nav .links button {
     margin: 0 auto;
     padding: 0 15px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imagenes/contacto.avif") no-repeat center center/cover;
+        url("/imagenes/contacto.png") no-repeat center center/cover;
 }
 
 /* Estilo del encabezado */
