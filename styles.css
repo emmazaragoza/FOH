@@ -1,0 +1,496 @@
+:root {
+    --color_primario: #060488;
+    --color_primario_suave: #060488;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+}
+
+.menu_hamburguesa {
+    display: none;
+}
+
+.menu_hamburguesa:checked+.ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+
+.logo {
+    color: var(--color_blanco);
+}
+
+
+
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario_suave);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    /* height: calc(100vh - var(--altura_header)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+}
+
+
+.link {
+    font-size: 3em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+header .logo-img {
+    width: 50px;
+}
+
+header nav .links button {
+    background-color: rgb(58, 236, 8);
+    color: rgb(0, 0, 0);
+    border: none;
+    margin: 5px 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+/* SECCION Servicios*/
+#servicios .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    text-align: center;
+    padding: 300px 12px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.6)), url("imagenes/inicio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#servicios .container h1 {
+    color: white;
+    padding: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#servicios .container p {
+    color: white;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#servicios .container button {
+    background-color: rgb(58, 236, 8);
+    color: rgb(0, 0, 0);
+    border: none;
+    margin: 5px 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Servicios */
+#servicios .container h1 {
+    color: white;
+    padding: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#servicios .container p {
+    color: white;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#servicios .container h3 {
+    color: white;
+    padding: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* SECCION Como Funciona */
+#como-funciona .container {
+    padding: 10% 5%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Espaciado entre elementos */
+}
+
+#como-funciona .container p {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#como-funciona .contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#como-funciona .contenido-principal .imagen {
+    flex: 1 1 30%;
+    max-width: 50%;
+    display: none;
+    /* Ocultar la imagen */
+}
+
+#como-funciona .contenido-principal .texto {
+    flex: 1 1 60%;
+    text-align: left;
+    color: #000;
+}
+
+#como-funciona .contenido-principal .texto h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#como-funciona .contenido-principal .texto-lateral {
+    margin-top: 1rem;
+}
+
+#como-funciona .contenido-principal .texto-lateral p {
+    background-color: #f9f9f9;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* SECCION Beneficios*/
+
+#beneficios {
+    padding: 3% 5%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#beneficios .container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#beneficios .titulo-beneficios h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bene {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bene-img {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.bene-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texto {
+    flex: 1 1 50%;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.texto p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+    flex: 1 1 50%;
+    font-weight: bold;
+}
+
+.p-beneficios {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bene-cuente {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.bene-cuente-h2 h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bene-cuente-texto button {
+    display: block;
+    width: 100%;
+    color: #000000;
+    background-color: #049602;
+    border-color: #049602;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    margin: 20px 10px;
+    padding: 15px 40px;
+}
+
+#contacto {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la sección */
+.container-contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/imagenes/contacto.avif") no-repeat center center/cover;
+}
+
+/* Estilo del encabezado */
+.contacto h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo del párrafo debajo del título */
+.contacto p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Campos de entrada del formulario */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #888888;
+    border-radius: 8px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+/* Estilo del botón de enviar */
+form button {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    background-color: #049602;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #037d01;
+}
+
+/* Asegura que los campos de texto tengan un tamaño adecuado */
+form textarea {
+    resize: none;
+    height: 150px;
+}
+
+footer {
+    background-color: #050156;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Contenedor del footer */
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Enlaces en el footer */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Si decides agregar más enlaces en el futuro */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer li {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) {
+    .labe_hamburguesa {
+        display: none;
+    }
+
+    .ul_links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .link {
+        font-size: 1.2rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+    }
+
+    .link:hover {
+        background-color: #5f1192;
+    }
+
+    .contacto h1 {
+        font-size: 1.6em;
+    }
+
+    .contacto p {
+        font-size: 1em;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+}
