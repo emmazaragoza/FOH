@@ -485,6 +485,227 @@ footer li {
         font-size: 1em;
     }
 
+    #servicios {
+        position: relative;
+        /* Contenedor padre con posición relativa */
+        width: 100%;
+        height: 100vh;
+        /* Ocupa toda la altura de la ventana */
+        overflow: hidden;
+        /* Previene que el contenido se desborde */
+    }
+
+    #servicios .container {
+        position: relative;
+        /* Mantiene su posición en relación al padre */
+        z-index: 2;
+        /* Coloca este elemento por encima de las imágenes */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 500px 12px;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        /* Opcional: asegúrate de que el texto sea visible */
+    }
+
+    #servicios .img-fondo1,
+    #servicios .img-fondo2 {
+        position: absolute;
+        /* Posición absoluta para superponer */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        /* Coloca las imágenes detrás del contenido */
+    }
+
+    #servicios .img-fondo1 {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+            url("imagenes/capa-1.png");
+        opacity: 1;
+        /* Ajusta la opacidad si deseas */
+    }
+
+    #servicios .img-fondo2 {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+            url("imagenes/inicio.png");
+        z-index: 0;
+        /* Esta capa estará detrás */
+        opacity: 0.6;
+        /* Opcional: Ajusta la opacidad */
+    }
+
+    #servicios .container h1 {
+        color: white;
+        font-size: 3em;
+        /* Tamaño del texto */
+        font-weight: bold;
+        margin-top: 300px;
+        margin-left: 150px;
+        /* Espacio superior e inferior */
+        padding: 10px;
+        text-align: left;
+        /* Alinea el texto al lado izquierdo */
+        width: 50%;
+        /* Ancho del 60% de la pantalla */
+        line-height: 1.4;
+        /* Mejora el espaciado entre líneas */
+
+
+    }
+
+
+    #servicios .container p {
+        color: white;
+        font-size: 5em;
+        /* Tamaño del texto */
+        font-weight: bold;
+        text-align: left;
+        /* Alinea el texto al lado izquierdo */
+        width: 60%;
+        /* Ancho igual al del h1 */
+        margin: 0 150px;
+        /* Misma alineación horizontal que el h1 */
+        padding: 10px 0;
+        /* Opcional: Espaciado interno */
+        line-height: 1.4;
+        /* Espaciado entre líneas */
+    }
+
+    #servicios .container .demo {
+        display: block;
+        width: 20%;
+        color: #000000;
+        background-color: #049602;
+        border-color: #049602;
+        padding: 1rem;
+        font-size: 1.25rem;
+        border-radius: 1rem;
+        margin-top: 50px;
+        margin-left: 330px;
+    }
+
+
+
+    /*SECCION: como-funciona*/
+    #como-funciona {
+        padding: 3% 5%;
+        /* Espaciado general de la sección */
+        background-color: #ffffff;
+        /* Fondo blanco */
+    }
+
+    #como-funciona p {
+        text-align: center;
+        /* Centrar el texto */
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        /* Ajustar tamaño de la fuente */
+        font-weight: bold;
+        color: #000000;
+    }
+
+    #como-funciona .contenido-principal {
+        display: flex;
+        flex-wrap: wrap;
+        /* Asegura que los elementos se ajusten en pantallas pequeñas */
+        gap: 2rem;
+        /* Espaciado entre columnas */
+        justify-content: center;
+        /* Centrar el contenido principal */
+        align-items: flex-start;
+        /* Alineación superior para textos largos */
+    }
+
+    #como-funciona .contenido-principal .imagen {
+        flex: 1 1 30%;
+        max-width: 50%;
+        /* Ocultar la imagen */
+    }
+
+    #como-funciona .imagen img {
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho disponible */
+        height: auto;
+        /* Mantiene las proporciones */
+        border-radius: 10px;
+        /* Bordes redondeados */
+    }
+
+    #como-funciona .texto {
+        flex: 1 1 50%;
+        /* Ocupa el 50% del contenedor */
+        max-width: 60%;
+        /* Limitar el ancho máximo */
+        text-align: left;
+        /* Alineación izquierda del texto */
+    }
+
+    #como-funciona .texto h2 {
+        font-size: 2.5rem;
+        /* Tamaño del título */
+        margin-bottom: 1rem;
+        /* Separación del título con los párrafos */
+        color: #000000;
+        font-weight: bold;
+    }
+
+    #como-funciona .texto-lateral {
+        margin-top: 1rem;
+        /* Separación con el título */
+    }
+
+    #como-funciona .texto-lateral p {
+        background-color: #f9f9f9;
+        /* Fondo ligeramente gris */
+        margin: 0.5rem 0;
+        /* Espaciado entre los bloques */
+        padding: 0.8rem 1rem;
+        /* Espaciado interno */
+        text-align: left;
+        /* Alineación izquierda */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        font-size: 1.2rem;
+        /* Tamaño del texto */
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Sombra sutil */
+    }
+
+
+    /* Servicios */
+    #servicios .container h1 {
+        color: white;
+        padding: 0;
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #servicios .container p {
+        color: white;
+        padding: 0;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    #servicios .container h3 {
+        color: white;
+        padding: 0;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+
+
     form {
         align-items: center;
     }
