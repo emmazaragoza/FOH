@@ -206,7 +206,7 @@ header nav .links button {
     gap: 2rem;
 }
 
-#como-funciona .contenido-principal .imagen {
+#como-funciona .contenido-principal .imagen img {
     flex: 1 1 30%;
     max-width: 50%;
     display: none;
@@ -543,6 +543,23 @@ footer li {
         /* Opcional: Ajusta la opacidad */
     }
 
+    #como-funciona .container p {
+        text-align: center;
+        /* font-size: 1.25rem; */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 4rem;
+        font-size: 5rem;
+    }
+
+    #como-funciona .container {
+        padding: 5% 5%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
     #servicios .container h1 {
         color: white;
         font-size: 3em;
@@ -607,10 +624,19 @@ footer li {
         text-align: center;
         /* Centrar el texto */
         margin-bottom: 2rem;
-        font-size: 2rem;
+        font-size: 5rem;
         /* Ajustar tamaño de la fuente */
         font-weight: bold;
         color: #000000;
+    }
+
+    #como-funciona .container p {
+        text-align: center;
+        /* font-size: 1.25rem; */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-size: 5rem;
     }
 
     #como-funciona .contenido-principal {
@@ -627,26 +653,27 @@ footer li {
 
     #como-funciona .contenido-principal .imagen {
         flex: 1 1 30%;
+        /* Ocupa el 30% del contenedor */
         max-width: 50%;
-        /* Ocultar la imagen */
+        /* Ancho máximo del 50% */
+        display: block;
+        /* Mostrar la imagen */
     }
 
-    #como-funciona .imagen img {
+    #como-funciona .contenido-principal .imagen img {
         width: 100%;
-        /* Asegura que la imagen ocupe todo el ancho disponible */
-        height: auto;
-        /* Mantiene las proporciones */
-        border-radius: 10px;
-        /* Bordes redondeados */
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5% / 5%;
+        overflow: hidden;
+        display: block;
+        max-width: 100%;
     }
 
     #como-funciona .texto {
         flex: 1 1 50%;
         /* Ocupa el 50% del contenedor */
         max-width: 60%;
-        /* Limitar el ancho máximo */
-        text-align: left;
-        /* Alineación izquierda del texto */
     }
 
     #como-funciona .texto h2 {
@@ -681,6 +708,87 @@ footer li {
         /* Sombra sutil */
     }
 
+    #beneficios {
+        padding: 3% 5%;
+        background-color: #ffffff;
+    }
+
+    #beneficios .container {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #beneficios .titulo-beneficios h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .bene {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .bene-img {
+        flex: 1 1 40%;
+        max-width: 40%;
+        text-align: center;
+    }
+
+    .bene-img img {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .texto {
+        flex: 1 1 50%;
+        max-width: 50%;
+        text-align: left;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .texto p {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+    }
+
+    .p-beneficios {
+        margin-left: 0;
+        text-align: start;
+    }
+
+    .bene-cuente {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .bene-cuente-h2 .bene-2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .bene-cuente-texto .link button {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: #049602;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .bene-cuente-texto .link button:hover {
+        background-color: #037d01;
+    }
 
     /* Servicios */
     #servicios .container h1 {
