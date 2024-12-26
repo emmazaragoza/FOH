@@ -177,18 +177,23 @@
       </div>
     </seccion>
     <script>
-      document
-        .getElementById("formulario-contacto")
-        .addEventListener("submit", async (event) => {
+      document.addEventListener("DOMContentLoaded", () => {
+        const formulario = document.getElementById("formulario-contacto");
+
+        formulario.addEventListener("submit", async (event) => {
           event.preventDefault();
 
-          const nombre = document.getElementById("nombre").value;
-          const correo = document.getElementById("correo").value;
-          const mensaje = document.getElementById("mensaje").value;
+          const nombre = document.getElementById("nombre").value.trim();
+          const correo = document.getElementById("correo").value.trim();
+          const mensaje = document.getElementById("mensaje").value.trim();
 
-          // URL de Google Apps Script
+          if (!nombre || !correo || !mensaje) {
+            alert("Por favor, completa todos los campos.");
+            return;
+          }
+
           const url =
-            "https://script.google.com/macros/s/AKfycbwmagtV-r8OrzJnZJoBi9cdFUfDW1bOuVJhGqNdtNWq5ag2_MVaIu8cCDOfIeuZXMUy/exec";
+            "https://script.google.com/macros/s/AKfycby2YLJAgqjSbVChJ2cik89agqse7ev1A316aCVbg4LRaZ5X3QSRjpZXld1ZuMXP3tPxrA/exec";
 
           try {
             const response = await fetch(url, {
@@ -199,20 +204,20 @@
                 email: correo,
                 message: mensaje,
               }),
+              mode: "no-cors", // Agregar este modo para evitar errores de CORS
             });
 
-            const result = await response.json();
-            if (result.success) {
-              alert("Mensaje enviado con éxito.");
-              event.target.reset();
-            } else {
-              alert("Error al enviar el mensaje.");
-            }
+            // Solo mostrar un mensaje sin intentar leer la respuesta
+            alert("Mensaje enviado correctamente.");
+            formulario.reset();
           } catch (error) {
-            console.error("Error:", error);
-            alert("No se pudo enviar el mensaje.");
+            console.error("Error al enviar el mensaje:", error);
+            alert(
+              "No se pudo enviar el mensaje. Revisa tu conexión a internet."
+            );
           }
         });
+      });
     </script>
 
     <footer>
