@@ -139,18 +139,28 @@
         <div class="contacto">
           <h1>CONTACTO</h1>
           <p>Dejanos tu consulta y nos pondremos en contacto a la brevedad</p>
-          <form action="">
-            <input type="text" placeholder="Nombre" />
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Telefono" />
+          <form id="formulario-contacto">
+            <input
+              type="text"
+              id="nombre"
+              name="name"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="email"
+              id="correo"
+              name="email"
+              placeholder="Correo Electrónico"
+              required
+            />
             <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
+              id="mensaje"
+              name="message"
               placeholder="Mensaje"
+              required
             ></textarea>
-            <button>ENVIAR</button>
+            <button type="submit">Enviar</button>
           </form>
           <div class="redes-sociales">
             <a href="https://www.linkedin.com" target="_blank" class="icono">
@@ -166,6 +176,44 @@
         </div>
       </div>
     </seccion>
+    <script>
+      document
+        .getElementById("formulario-contacto")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const nombre = document.getElementById("nombre").value;
+          const correo = document.getElementById("correo").value;
+          const mensaje = document.getElementById("mensaje").value;
+
+          // URL de Google Apps Script
+          const url =
+            "https://script.google.com/macros/s/AKfycbwmagtV-r8OrzJnZJoBi9cdFUfDW1bOuVJhGqNdtNWq5ag2_MVaIu8cCDOfIeuZXMUy/exec";
+
+          try {
+            const response = await fetch(url, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                name: nombre,
+                email: correo,
+                message: mensaje,
+              }),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+              alert("Mensaje enviado con éxito.");
+              event.target.reset();
+            } else {
+              alert("Error al enviar el mensaje.");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("No se pudo enviar el mensaje.");
+          }
+        });
+    </script>
 
     <footer>
       <div class="contenedor-footer">
