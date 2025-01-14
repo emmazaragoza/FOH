@@ -1,6 +1,6 @@
 :root {
-    --color_primario: #060488;
-    --color_primario_suave: #060488;
+    --color_primario: #06046b;
+    --color_primario_suave: #06046b;
     --color_blanco: #fff;
     --altura_header: 80px;
     --padding_left_right: 2rem;
@@ -61,7 +61,7 @@ ul {
 
 
 .list_icon {
-    color: var(--color_blanco);
+    color: white;
     cursor: pointer;
 }
 
@@ -84,9 +84,8 @@ ul {
 
 
 .link {
-    font-size: 3em;
+    font-size: 1em;
     color: var(--color_blanco);
-    font-weight: bold;
 }
 
 header .logo-img {
@@ -102,7 +101,7 @@ header nav .links button {
     border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 
@@ -127,7 +126,7 @@ header nav .links button {
 }
 
 #servicios .container h1 {
-    color: white;
+    color: rgba(255, 255, 255, 0.042);
     padding: 0;
     font-size: 3em;
     font-weight: bold;
@@ -234,7 +233,7 @@ header nav .links button {
     background-color: #f9f9f9;
     margin: 0.5rem 0;
     padding: 0.75rem;
-    text-align: center;
+    text-align: start;
     border-radius: 5px;
     font-size: 1.2rem;
     color: #333;
@@ -266,7 +265,6 @@ header nav .links button {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    align-items: flex-start;
 }
 
 .bene-img {
@@ -323,6 +321,28 @@ header nav .links button {
     border-radius: 1rem;
     margin: 20px 10px;
     padding: 15px 40px;
+}
+
+.bene-img-2 {
+    flex: 1 1 100%;
+    text-align: end;
+    display: block;
+    /* disponer en bloques */
+    margin: 0 auto;
+    /* centrar horizontalmente */
+    max-width: 100%;
+    /* Ancho máximo */
+
+    text-align: center;
+
+
+}
+
+.bene-img-2 img {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px;
 }
 
 #contacto {
@@ -471,6 +491,150 @@ footer li {
 
 
 
+
+/*SECCION: como-funciona*/
+#quienes-somos .container {
+    padding: 1% 1%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#quienes-somos .container h1 {
+    text-align: center;
+    /* font-size: 1.25rem; */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+
+
+
+#quienes-somos {
+    padding: 3% 5%;
+    /* Espaciado general de la sección */
+    background-color: #ffffff;
+    /* Fondo blanco */
+}
+
+#quienes-somos p {
+    text-align: center;
+    /* Centrar el texto */
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    /* Ajustar tamaño de la fuente */
+    font-weight: bold;
+    color: #000000;
+}
+
+#quienes-somos .container p {
+    text-align: center;
+    /* font-size: 1.25rem; */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+}
+
+#quienes-somos .contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+    /* Asegura que los elementos se ajusten en pantallas pequeñas */
+    gap: 2rem;
+    /* Espaciado entre columnas */
+    justify-content: center;
+    /* Centrar el contenido principal */
+    align-items: flex-start;
+    /* Alineación superior para textos largos */
+}
+
+
+#quienes-somos .texto-lateral {
+    margin-top: 0rem;
+    max-width: 100%;
+}
+
+#quienes-somos .texto-lateral p {
+    background-color: #f9f9f9;
+    /* Fondo ligeramente gris */
+    margin: 0.5rem 0;
+    /* Espaciado entre los bloques */
+    padding: 0.8rem 1rem;
+    /* Espaciado interno */
+    text-align: left;
+    /* Alineación izquierda */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 1.2rem;
+    /* Tamaño del texto */
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+.bene-img-2 .logo-img-qs {
+    width: 120px;
+    height: auto;
+    text-align: center;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.card .card-icon {
+    margin: 10px;
+}
+
+.card .card-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.card-body p {
+    font-size: 16px;
+    /* Ajusta a un tamaño razonable */
+    color: #333;
+    /* Puedes ajustar el color según tu preferencia */
+}
+
+
+/*
+.card-icon {
+    margin-bottom: 10px;
+}
+
+.card-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.card-container .card .text-center .card-body p {
+    font-size: 1px;
+    color: #e70707;
+}
+
+*/
 
 
 
@@ -749,8 +913,9 @@ footer li {
     }
 
     #beneficios {
-        padding: 3% 5%;
+        padding-top: 5%;
         background-color: #ffffff;
+        padding-bottom: 0px;
     }
 
     #beneficios .container {
@@ -780,7 +945,7 @@ footer li {
     }
 
     .bene-img img {
-        width: 50%;
+        width: 80%;
         height: auto;
         border-radius: 10px;
     }
@@ -909,6 +1074,7 @@ footer li {
         border-radius: 8px;
         color: #ffffff;
         font-size: 1em;
+        font-family: Arial, sans-serif
     }
 
 
@@ -1026,5 +1192,143 @@ footer li {
         width: 24px;
         height: 24px;
     }
+
+
+
+
+    /*SECCION: como-funciona*/
+    #quienes-somos .container {
+        padding: 1% 1%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    #quienes-somos .container h1 {
+        text-align: center;
+        /* font-size: 1.25rem; */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 4rem;
+    }
+
+
+
+    #quienes-somos {
+        padding: 3% 5%;
+        /* Espaciado general de la sección */
+        background-color: #ffffff;
+        /* Fondo blanco */
+    }
+
+    #quienes-somos p {
+        text-align: center;
+        /* Centrar el texto */
+        margin-bottom: 2rem;
+        font-size: 5rem;
+        /* Ajustar tamaño de la fuente */
+        font-weight: bold;
+        color: #000000;
+    }
+
+    #quienes-somos .container p {
+        text-align: center;
+        /* font-size: 1.25rem; */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-size: 5rem;
+    }
+
+    #quienes-somos .contenido-principal {
+        display: flex;
+        flex-wrap: wrap;
+        /* Asegura que los elementos se ajusten en pantallas pequeñas */
+        gap: 2rem;
+        /* Espaciado entre columnas */
+        justify-content: center;
+        /* Centrar el contenido principal */
+        align-items: flex-start;
+        /* Alineación superior para textos largos */
+    }
+
+
+    #quienes-somos .texto {
+        flex: 1 1 50%;
+        /* Ocupa el 50% del contenedor */
+        max-width: 100%;
+    }
+
+    #quienes-somos .texto h1 {
+        font-size: 2.5rem;
+        /* Tamaño del título */
+        margin-bottom: 1rem;
+        /* Separación del título con los párrafos */
+        color: #000000;
+        font-weight: bold;
+    }
+
+    #quienes-somos .texto-lateral {
+        margin-top: 1rem;
+        /* Separación con el título */
+    }
+
+    #quienes-somos .texto-lateral p {
+        background-color: #f9f9f9;
+        /* Fondo ligeramente gris */
+        margin: 0.5rem 0;
+        /* Espaciado entre los bloques */
+        padding: 0.8rem 1rem;
+        /* Espaciado interno */
+        text-align: left;
+        /* Alineación izquierda */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        font-size: 1.2rem;
+        /* Tamaño del texto */
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Sombra sutil */
+    }
+
+
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 200px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px auto;
+        text-align: center;
+        background-color: #ffffff;
+    }
+
+    .card .card-icon {
+        margin: 10px;
+    }
+
+    .card .card-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-body h5 {
+        font-size: 2rem;
+        /* Ajusta a un tamaño razonable */
+        color: #333;
+        /* Puedes ajustar el color según tu preferencia */
+    }
+
 
 }
