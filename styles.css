@@ -326,7 +326,7 @@ header nav .links button {
 .bene-img-2 {
     flex: 1 1 100%;
     text-align: end;
-    display: block;
+    display: grid;
     /* disponer en bloques */
     margin: 0 auto;
     /* centrar horizontalmente */
@@ -336,6 +336,25 @@ header nav .links button {
     text-align: center;
 
 
+}
+
+.bene-img-2 img {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.bene-img-2 {
+    flex: 1 1 100%;
+    text-align: end;
+    display: grid;
+    /* disponer en bloques */
+    margin: 0 auto;
+    /* centrar horizontalmente */
+    max-width: 100%;
+    /* Ancho máximo */
+    text-align: center;
 }
 
 .bene-img-2 img {
@@ -424,9 +443,11 @@ form textarea {
 footer {
     background-color: #050156;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 40px 0;
+    width: 100%;
+    height: 80px;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /* Redes sociales */
@@ -619,30 +640,6 @@ footer li {
 }
 
 
-/*
-.card-icon {
-    margin-bottom: 10px;
-}
-
-.card-icon img {
-    width: 60px;
-    height: 60px;
-}
-
-.card-container .card .text-center .card-body p {
-    font-size: 1px;
-    color: #e70707;
-}
-
-*/
-
-
-
-
-
-
-
-
 
 
 @media (min-width:768px) {
@@ -669,7 +666,7 @@ footer li {
     }
 
     .contacto h1 {
-        font-size: 2em;
+        font-size: 2.5em;
         text-align: center;
         font-weight: bold;
         margin-bottom: 10px;
@@ -881,7 +878,7 @@ footer li {
     }
 
     #como-funciona .texto h2 {
-        font-size: 2.5rem;
+        font-size: 2em;
         /* Tamaño del título */
         margin-bottom: 1rem;
         /* Separación del título con los párrafos */
@@ -894,7 +891,7 @@ footer li {
         /* Separación con el título */
     }
 
-    #como-funciona .texto-lateral p {
+    #como-funciona .texto .texto-lateral p {
         background-color: #f9f9f9;
         /* Fondo ligeramente gris */
         margin: 0.5rem 0;
@@ -905,7 +902,7 @@ footer li {
         /* Alineación izquierda */
         border-radius: 5px;
         /* Bordes redondeados */
-        font-size: 1.2rem;
+        font-size: 1.5em;
         /* Tamaño del texto */
         color: #333;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -960,7 +957,7 @@ footer li {
 
     .texto p {
         margin: 1rem 0;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .p-beneficios {
@@ -1073,7 +1070,7 @@ footer li {
         border: 1px solid #888888;
         border-radius: 8px;
         color: #ffffff;
-        font-size: 1em;
+        font-size: 1.4em;
         font-family: Arial, sans-serif
     }
 
@@ -1193,6 +1190,26 @@ footer li {
         height: 24px;
     }
 
+    .bene-img-2 {
+        flex: 1 1 100%;
+        text-align: end;
+        display: block;
+        /* disponer en bloques */
+        margin: 0 auto;
+        /* centrar horizontalmente */
+        max-width: 100%;
+        /* Ancho máximo */
+        text-align: center;
+    }
+
+    .bene-img-2 img {
+        width: 150px;
+        height: auto;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+
 
 
 
@@ -1286,7 +1303,7 @@ footer li {
         /* Alineación izquierda */
         border-radius: 5px;
         /* Bordes redondeados */
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         /* Tamaño del texto */
         color: #333;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1304,7 +1321,7 @@ footer li {
     }
 
     .card {
-        width: 200px;
+        width: 330px;
         padding: 20px;
         border: 1px solid #ddd;
         border-radius: 8px;
@@ -1329,6 +1346,5 @@ footer li {
         color: #333;
         /* Puedes ajustar el color según tu preferencia */
     }
-
 
 }
